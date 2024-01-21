@@ -1,26 +1,119 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLAY BOX SHOOTER GAME
-    </title>
+    <title>Your Game Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .game-card {
+            display: flex;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-image {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .game-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .game-details {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .game-description {
+            color: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Button -->
-<button id="myButton">Click me</button>
+    <header>
+        <h1>Your Game Portfolio</h1>
+    </header>
 
-<script>
-    // JavaScript code to open the link when the button is clicked
-    document.getElementById("myButton").addEventListener("click", function() {
-        // Specify the URL you want to open
-        var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
+    <section>
+        <div class="game-card">
+            <div class="game-image">
+                <img src="saurabhmohir1.jpg" alt="Game 1">
+            </div>
+            <div class="game-details">
+                <h2 class="game-title">Game 1</h2>
+                <p class="game-description">Description of Game 1 goes here. You can provide information about the gameplay, features, and more.</p>
+            </div>
+        </div>
 
-        // Open the link in a new tab or window
-        window.open(linkToOpen, "_blank");
-    });
-</script>
+        <!-- Add more game cards as needed -->
+        <!-- Example:
+        <div class="game-card">
+            <div class="game-image">
+                <img src="game2.jpg" alt="Game 2">
+            </div>
+            <div class="game-details">
+                <h2 class="game-title">Game 2</h2>
+                <p class="game-description">Description of Game 2 goes here.</p>
+            </div>
+        </div>
+        -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Game Portfolio</p>
+    </footer>
 
 </body>
 </html>
