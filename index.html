@@ -134,8 +134,12 @@
 
         // Open the link in a new tab or window
         window.location.href = event.target.href; 
-        window.open(linkToOpen, "_blank");
+        window.open(linkToOpen, "_self");
     });
+    function openInSameTab(event) {
+        event.preventDefault(); // Prevent the default behavior (opening in a new tab)
+        window.location.href = event.target.href; // Navigate to the link's href
+    }
 </script>
         </div>
 
