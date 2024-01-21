@@ -92,7 +92,33 @@
             cursor: pointer;
         }
 
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+            gap: 20px; /* Gap between columns */
+            max-width: 1200px; /* Set a maximum width for the container */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
 
+        .column {
+            flex: 0 0 calc(50% - 10px); /* Take up 50% of the container's width with a gap of 20px */
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the elements inside each column */
+        .element {
+            padding: 20px;
+            margin-bottom: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
 
 
 
@@ -116,29 +142,173 @@
     </header>
 
     <section>
-        <div class="game-card">
-            <div class="game-image">
-                <img src="BoxShooter.gif" alt="Game 1">
+        <div class="container">
+            <div class="column">
+                <div class="element">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="BoxShooter.gif" alt="Game 1">
+                        </div>
+                        <div class="game-details">
+                            <h2 class="game-title">Box SHOOTER</h2>
+                            <p class="game-description">Shoot the Boxes to Score</p>
+                            <a id="myButton" href="#" class="play-button">Play Now</a>
+                        </div>
+            
+            <script>
+                // JavaScript code to open the link when the button is clicked
+                document.getElementById("myButton").addEventListener("click", function() {
+                    // Specify the URL you want to open
+                    var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
+            
+                    // Open the link in a new tab or window
+                    window.location.href = event.target.href; 
+                    window.open(linkToOpen, "_self");
+                });
+            
+            </script>
+                    </div>
+                </div>
+
+
+                <div class="element">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="BoxShooter.gif" alt="Game 1">
+                        </div>
+                        <div class="game-details">
+                            <h2 class="game-title">Box SHOOTER</h2>
+                            <p class="game-description">Shoot the Boxes to Score</p>
+                            <a id="myButton" href="#" class="play-button">Play Now</a>
+                        </div>
+            
+            <script>
+                // JavaScript code to open the link when the button is clicked
+                document.getElementById("myButton").addEventListener("click", function() {
+                    // Specify the URL you want to open
+                    var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
+            
+                    // Open the link in a new tab or window
+                    window.location.href = event.target.href; 
+                    window.open(linkToOpen, "_self");
+                });
+            
+            </script>
+                    </div>
+                </div>
+
+                <div class="element">
+                    <div class="game-card">
+                        <div class="game-image">
+                            <img src="BoxShooter.gif" alt="Game 1">
+                        </div>
+                        <div class="game-details">
+                            <h2 class="game-title">Box SHOOTER</h2>
+                            <p class="game-description">Shoot the Boxes to Score</p>
+                            <a id="myButton" href="#" class="play-button">Play Now</a>
+                        </div>
+            
+            <script>
+                // JavaScript code to open the link when the button is clicked
+                document.getElementById("myButton").addEventListener("click", function() {
+                    // Specify the URL you want to open
+                    var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
+            
+                    // Open the link in a new tab or window
+                    window.location.href = event.target.href; 
+                    window.open(linkToOpen, "_self");
+                });
+            
+            </script>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="column">
+                    <div class="element">
+                        <div class="game-card">
+                            <div class="game-image">
+                                <img src="BoxShooter.gif" alt="Game 1">
+                            </div>
+                            <div class="game-details">
+                                <h2 class="game-title">Box SHOOTER</h2>
+                                <p class="game-description">Shoot the Boxes to Score</p>
+                                <a id="myButton" href="#" class="play-button">Play Now</a>
+                            </div>
+                
+                <script>
+                    // JavaScript code to open the link when the button is clicked
+                    document.getElementById("myButton").addEventListener("click", function() {
+                        // Specify the URL you want to open
+                        var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
+                
+                        // Open the link in a new tab or window
+                        window.location.href = event.target.href; 
+                        window.open(linkToOpen, "_self");
+                    });
+                
+                </script>
+                        </div>
+                    </div>
+    
+    
+                    <div class="element">
+                        <div class="game-card">
+                            <div class="game-image">
+                                <img src="BoxShooter.gif" alt="Game 1">
+                            </div>
+                            <div class="game-details">
+                                <h2 class="game-title">Box SHOOTER</h2>
+                                <p class="game-description">Shoot the Boxes to Score</p>
+                                <a id="myButton" href="#" class="play-button">Play Now</a>
+                            </div>
+                
+                <script>
+                    // JavaScript code to open the link when the button is clicked
+                    document.getElementById("myButton").addEventListener("click", function() {
+                        // Specify the URL you want to open
+                        var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
+                
+                        // Open the link in a new tab or window
+                        window.location.href = event.target.href; 
+                        window.open(linkToOpen, "_self");
+                    });
+                
+                </script>
+                        </div>
+                    </div>
+    
+                    <div class="element">
+                        <div class="game-card">
+                            <div class="game-image">
+                                <img src="BoxShooter.gif" alt="Game 1">
+                            </div>
+                            <div class="game-details">
+                                <h2 class="game-title">Box SHOOTER</h2>
+                                <p class="game-description">Shoot the Boxes to Score</p>
+                                <a id="myButton" href="#" class="play-button">Play Now</a>
+                            </div>
+                
+                <script>
+                    // JavaScript code to open the link when the button is clicked
+                    document.getElementById("myButton").addEventListener("click", function() {
+                        // Specify the URL you want to open
+                        var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
+                
+                        // Open the link in a new tab or window
+                        window.location.href = event.target.href; 
+                        window.open(linkToOpen, "_self");
+                    });
+                
+                </script>
+                        </div>
+                    </div>
+    
+                    </div>
             </div>
-            <div class="game-details">
-                <h2 class="game-title">Box SHOOTER</h2>
-                <p class="game-description">Shoot the Boxes to Score</p>
-                <a id="myButton" href="#" class="play-button">Play Now</a>
-            </div>
 
-<script>
-    // JavaScript code to open the link when the button is clicked
-    document.getElementById("myButton").addEventListener("click", function() {
-        // Specify the URL you want to open
-        var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
-
-        // Open the link in a new tab or window
-        window.location.href = event.target.href; 
-        window.open(linkToOpen, "_self");
-    });
-
-</script>
-        </div>
+      
 
         <!-- Add more game cards as needed -->
         <!-- Example:
@@ -153,7 +323,7 @@
         </div>
         -->
 
-        <div class="game-card">
+        <!-- <div class="game-card">
             <div class="game-image">
                 <img src="bouncingballs.jpeg" alt="Game 1">
             </div>
@@ -201,7 +371,6 @@
 
 
         <div class="game-card">
-           
                 <div class="game-image">
                     <img src="RollerMadness.png" alt="Game 1">
                 </div>
@@ -223,7 +392,7 @@
     
     </script>
             
-        </div>
+        </div> -->
 
 
     </section>
