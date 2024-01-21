@@ -92,6 +92,11 @@
             cursor: pointer;
         }
 
+        .new-element {
+            flex: 0 0 33.33%; /* Take up 33.33% of the container's width (1/3 of the screen) */
+            margin-right: 20px; /* Add some margin to separate the new elements */
+        }
+
 
 
         footer {
@@ -195,6 +200,32 @@
     });
 
 </script>
+        </div>
+
+
+        <div class="new-element">
+            <div class="game-card">
+                <div class="game-image">
+                    <img src="spacerjourney.gif" alt="Game 1">
+                </div>
+                <div class="game-details">
+                    <h2 class="game-title">SPACE JOURNEY</h2>
+                    <p class="game-description">ENJOY YOUR SPACE JOURNEY</p>
+                    <a id="myButton3" href="#" class="play-button">Play Now</a>
+                </div>
+    <script>
+        // JavaScript code to open the link when the button is clicked
+        document.getElementById("myButton3").addEventListener("click", function() {
+            // Specify the URL you want to open
+            var linkToOpen = "https://saurabh281097.github.io/RollerMadness/";
+    
+            // Open the link in a new tab or window
+            window.location.href = event.target.href; 
+            window.open(linkToOpen, "_self");
+        });
+    
+    </script>
+            </div>
         </div>
 
 
