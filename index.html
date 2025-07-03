@@ -1,319 +1,192 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAMEASTRA STUDIOS</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameAstra Studios | Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            position: relative;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
 
-        header img {
-            width: 200px; /* Set the desired width of the image */
-            height: 200px; /* Maintain aspect ratio */
-            margin-left: 10px; /* Adjust the right margin as needed */
-            vertical-align: middle; /* Align the image vertically with text */
-        }
+    header {
+      background: linear-gradient(120deg, #1e1e1e, #2d2d2d);
+      padding: 2em 1em;
+      text-align: center;
+    }
 
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #4caf50;
+      margin-bottom: 1em;
+    }
 
-        h2 {
-            color: #333;
-        }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
 
-        p {
-            color: #666;
-        }
+    header p {
+      font-size: 1.1em;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0.5em auto;
+    }
 
-        .game-card {
-            display: flex;
-            margin-bottom: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    header a {
+      color: #4cafef;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .game-image {
-            flex: 1;
-            overflow: hidden;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 2em auto;
+      padding: 0 1em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
 
-        .game-image img {
-            width: 100%;
-            height: 100%;
-        }
+    .game-card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
 
-        .game-details {
-            flex: 2;
-            padding: 20px;
-        }
+    .game-card:hover {
+      transform: scale(1.02);
+    }
 
-        .game-title {
-            font-size: 1.5em;
-            color: #333;
-            margin-bottom: 10px;
-        }
+    .game-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        .game-description {
-            color: #666;
-        }
+    .game-details {
+      padding: 1em;
+    }
 
-        .play-button {
-            display: block;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    .game-title {
+      font-size: 1.5em;
+      color: #4caf50;
+      margin-bottom: 0.5em;
+    }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-            gap: 20px; /* Gap between columns */
-            max-width: 1200px; /* Set a maximum width for the container */
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
+    .game-description {
+      color: #bbb;
+      margin-bottom: 1em;
+    }
 
-        .column {
-            flex: 0 0 calc(50% - 10px); /* Take up 50% of the container's width with a gap of 20px */
-            background-color: #fff;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    .play-button {
+      display: inline-block;
+      padding: 0.7em 1.5em;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-        /* Style for the elements inside each column */
-        .element {
-            padding: 20px;
-            margin-bottom: 10px;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-        }
+    .play-button:hover {
+      background-color: #45a049;
+    }
 
-        .blue-text {
-            color: blue;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+    footer {
+      background-color: #1e1e1e;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      color: #aaa;
+      margin-top: 3em;
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <img src="GameAstra.png" alt="GameAstra Logo">
+    <h1>Welcome to GameAstra Studios</h1>
+    <p>Hey! I'm <strong>Saurabh Mohrir</strong>, a passionate game developer who loves turning ideas into playful and interactive experiences. I've curated a few games I've built in my journey. Have fun playing them and feel free to drop your thoughts!</p>
+    <p>Also, check out my <a href="https://www.youtube.com/channel/UCNdb9Ub23Q4F4h-gmsXsnxw" target="_blank">YouTube channel</a> where I share insights and tutorials on game development.</p>
+  </header>
 
-    <header>
-        <img src="GameAstra.png" alt="Game 1">
-        <h1>WELCOME TO GAMEASTRA STUDIOS!!!</h1>
-        <p>Hey guys,my name is Saurabh Mohrir</p>
-        <p>Currently I am working as a Gameplay Programmer in Dream Game Studios in Pune.</p>
-        <p>I made compilation of few games which I have developed in my journey of game developement.</p>
-        <p>Please play my games and let me know if you have any suggestions to improve them.</p>
-        <p>Also there is my Youtube Channel for game developement. You can go throught it if you are interested to learn about game developement</p>
-        <a href="https://www.youtube.com/channel/UCNdb9Ub23Q4F4h-gmsXsnxw" class="blue-text">GameAstra STUDIOS</a>
-    </header>
-
-   
-        <div class="container">
-            <div class="column">
-                <div class="element">
-                    <div class="game-card">
-                        <div class="game-image">
-                            <img src="BoxShooter.gif" alt="Game 1">
-                        </div>
-                        <div class="game-details">
-                            <h2 class="game-title">Box SHOOTER</h2>
-                            <p class="game-description">Shoot the Boxes to Score</p>
-                            <a id="myButton" href="#" class="play-button">Play Now</a>
-                        </div>
-            
-            <script>
-                // JavaScript code to open the link when the button is clicked
-                document.getElementById("myButton").addEventListener("click", function() {
-                    // Specify the URL you want to open
-                    var linkToOpen = "https://saurabh281097.github.io/BoxShoot/";
-            
-                    // Open the link in a new tab or window
-                    window.location.href = event.target.href; 
-                    window.open(linkToOpen, "_self");
-                });
-            
-            </script>
-                    </div>
-                </div>
-
-
-                <div class="element">
-                    <div class="game-card">
-                        <div class="game-image">
-                            <img src="spacerjourney.gif" alt="Game 1">
-                        </div>
-                        <div class="game-details">
-                            <h2 class="game-title">SPACE JOURNEY</h2>
-                            <p class="game-description">ENJOY YOUR SPACE JOURNEY</p>
-                            <a id="myButton2" href="#" class="play-button">Play Now</a>
-                        </div>
-            <script>
-                // JavaScript code to open the link when the button is clicked
-                document.getElementById("myButton2").addEventListener("click", function() {
-                    // Specify the URL you want to open
-                    var linkToOpen = "https://gameastrastudios.itch.io/spacejourney/";
-            
-                    // Open the link in a new tab or window
-                    window.location.href = event.target.href; 
-                    window.open(linkToOpen, "_self");
-                });
-            
-            </script>
-                    </div>
-                </div>
-
-                <div class="element">
-                  
-        <div class="game-card">
-            <div class="game-image">
-                <img src="RollerMadness.png" alt="Game 1">
-            </div>
-            <div class="game-details">
-                <h2 class="game-title">ROLLERMADNESS</h2>
-                <p class="game-description">COLLECT THE COINS BUT BEWARE OF CUBES!!!</p>
-                <a id="myButton3" href="#" class="play-button">Play Now</a>
-            </div>
-<script>
-    // JavaScript code to open the link when the button is clicked
-    document.getElementById("myButton3").addEventListener("click", function() {
-        // Specify the URL you want to open
-        var linkToOpen = "https://saurabh281097.github.io/RollerMadness/";
-
-        // Open the link in a new tab or window
-        window.location.href = event.target.href; 
-        window.open(linkToOpen, "_self");
-    });
-
-</script>
-    </div>
+  <div class="container">
+    <div class="game-card">
+      <div class="game-image">
+        <img src="BoxShooter.gif" alt="Box Shooter">
+      </div>
+      <div class="game-details">
+        <div class="game-title">Box Shooter</div>
+        <div class="game-description">Shoot the boxes to score. Simple, fast, and fun!</div>
+        <a class="play-button" href="https://saurabh281097.github.io/BoxShoot/">Play Now</a>
+      </div>
     </div>
 
-                </div>
+    <div class="game-card">
+      <div class="game-image">
+        <img src="spacerjourney.gif" alt="Space Journey">
+      </div>
+      <div class="game-details">
+        <div class="game-title">Space Journey</div>
+        <div class="game-description">Embark on an interstellar adventure through space.</div>
+        <a class="play-button" href="https://gameastrastudios.itch.io/spacejourney/">Play Now</a>
+      </div>
+    </div>
 
-                <div class="column">
-                    <div class="element">
-                        <div class="game-card">
-                            <div class="game-image">
-                                <img src="bouncingballs.jpeg" alt="Game 1">
-                            </div>
-                            <div class="game-details">
-                                <h2 class="game-title">BOUNCING BALLS</h2>
-                                <p class="game-description">TAP ON BALLS</p>
-                                <a id="myButton4" href="#" class="play-button">Play Now</a>
-                            </div>
-                
-                <script>
-                    // JavaScript code to open the link when the button is clicked
-                    document.getElementById("myButton4").addEventListener("click", function() {
-                        // Specify the URL you want to open
-                        var linkToOpen = "https://saurabh281097.github.io/BouncingBalls/";
-                
-                        // Open the link in a new tab or window
-                        window.location.href = event.target.href; 
-                        window.open(linkToOpen, "_self");
-                    });
-                
-                </script>
-                        </div>
-                    </div>
-    
-    
-                    <div class="element">
-                        <div class="game-card">
-                            <div class="game-image">
-                                <img src="tenis.png" alt="Game 1">
-                            </div>
-                            <div class="game-details">
-                                <h2 class="game-title">TENNIS GAME</h2>
-                                <p class="game-description">PLAY TENNIS</p>
-                                <a id="myButton5" href="#" class="play-button">Play Now</a>
-                            </div>
-                
-                <script>
-                    // JavaScript code to open the link when the button is clicked
-                    document.getElementById("myButton5").addEventListener("click", function() {
-                        // Specify the URL you want to open
-                        var linkToOpen = "https://gameastrastudios.itch.io/tennis-game";
-                
-                        // Open the link in a new tab or window
-                        window.location.href = event.target.href; 
-                        window.open(linkToOpen, "_self");
-                    });
-                
-                </script>
-                        </div>
-                    </div>
-    
-         
-    
-                    </div>
-            </div>
+    <div class="game-card">
+      <div class="game-image">
+        <img src="RollerMadness.png" alt="Roller Madness">
+      </div>
+      <div class="game-details">
+        <div class="game-title">Roller Madness</div>
+        <div class="game-description">Collect coins while dodging cubes in this endless runner.</div>
+        <a class="play-button" href="https://saurabh281097.github.io/RollerMadness/">Play Now</a>
+      </div>
+    </div>
 
-      
+    <div class="game-card">
+      <div class="game-image">
+        <img src="bouncingballs.jpeg" alt="Bouncing Balls">
+      </div>
+      <div class="game-details">
+        <div class="game-title">Bouncing Balls</div>
+        <div class="game-description">Tap the bouncing balls and test your reflexes!</div>
+        <a class="play-button" href="https://saurabh281097.github.io/BouncingBalls/">Play Now</a>
+      </div>
+    </div>
 
-        <!-- Add more game cards as needed -->
-        <!-- Example:
-        <div class="game-card">
-            <div class="game-image">
-                <img src="game2.jpg" alt="Game 2">
-            </div>
-            <div class="game-details">
-                <h2 class="game-title">Game 2</h2>
-                <p class="game-description">Description of Game 2 goes here.</p>
-            </div>
-        </div>
-        -->
+    <div class="game-card">
+      <div class="game-image">
+        <img src="tenis.png" alt="Tennis Game">
+      </div>
+      <div class="game-details">
+        <div class="game-title">Tennis Game</div>
+        <div class="game-description">Challenge your skills in this classic tennis simulation.</div>
+        <a class="play-button" href="https://gameastrastudios.itch.io/tennis-game">Play Now</a>
+      </div>
+    </div>
+  </div>
 
-        <!-- 
-
-        
-
- -->
-
-
-    
-
-    <footer>
-        <p>&copy; GAME ASTRA STUDIOS</p>
-    </footer>
-
+  <footer>
+    <p>&copy; 2025 GameAstra Studios. Built with passion and pixels by Saurabh Mohrir.</p>
+  </footer>
 </body>
+
 </html>
