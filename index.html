@@ -61,13 +61,16 @@
       gap: 20px;
     }
 
-    .game-card {
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
-    }
+.game-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+
+  width: 100%;           /* add this */
+  max-width: 100%;       /* add this */
+}
 
     .game-card:hover {
       transform: scale(1.02);
